@@ -50,6 +50,7 @@ const depthFirstvalues = (root) => {
 
 }
 
+
 console.log(depthFirstvalues(a));
 
 
