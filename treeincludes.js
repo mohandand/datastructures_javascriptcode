@@ -28,13 +28,28 @@ c.left = f;
 //    / \      \
 //   d    e      f
 
-//DFS
+const treeincludes = (root ,target) => {
+    if(root === null)  return Node;
 
-const depthFirstvalues = (root) => {
-    if(root === null) return [];
+    let queue = [root];
 
-    const leftvalues =  depthFirstvalues(root.left);//[b,d,e]
-    const rightvalues = depthFirstvalues(root.right); //[c,f]
-    return [root.val, ...leftvalues, ...rightvalues];
+    while(queue.length>0){
+        const current = queue.shift();
+
+        if(current.val === target)  
+        {
+           return true;
+        }
+        if(current.left !== null) 
+        {
+            queue.push(current.left)
+        }
+        if(current.right !== null) 
+        {
+            queue.push(current.right)
+        }
+    }
+        return false;
 }
-console.log(depthFirstvalues(a));
+
+console.log(treeincludes(a,"f"));
