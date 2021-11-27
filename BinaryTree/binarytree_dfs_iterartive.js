@@ -51,7 +51,7 @@ const depthFirstvalues = (root) => {
 }
 
 
-console.log(depthFirstvalues(b)); //searching for root b
+console.log(depthFirstvalues(b)); //searching for root b form above tree.
 
 
 
