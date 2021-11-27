@@ -51,7 +51,7 @@ const depthFirstvalues = (root) => {
 }
 
 
-console.log(depthFirstvalues(a));
+console.log(depthFirstvalues(b));
 
 
 
