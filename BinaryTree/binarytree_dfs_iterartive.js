@@ -39,8 +39,8 @@ const depthFirstvalues = (root) => {
         const current = stack.pop();
         console.log(current.val);
         result.push(current.val);
-         //every instance of Node has dot val prpoerty on the inside. 
-        //And then from there i need to add this node childerns and we also needs to make sure this childrens exists
+         //Every instance of Node has dot val prpoerty on the inside. 
+        //And then from there I need to add this node childerns and we also needs to make sure this childrens exists
         if(current.right)
         stack.push(current.right);
         if(current.left)
