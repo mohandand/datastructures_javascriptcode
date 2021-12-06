@@ -31,7 +31,7 @@ c.left = f;
 //DFS (Depth First Search)
 
 const depthFirstvalues = (root) => {
-    if(root === null) return [];
+    if(root === null) return []; //edge case
     const stack = [root];
     const result = [];
     while(stack.length>0){
