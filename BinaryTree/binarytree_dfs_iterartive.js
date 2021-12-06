@@ -28,7 +28,7 @@ c.left = f;
 //    / \      \
 //   d    e      f
 
-//DFS (Depth)
+//DFS (Depth First Search)
 
 const depthFirstvalues = (root) => {
     if(root === null) return [];
