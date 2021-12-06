@@ -31,7 +31,7 @@ c.left = f;
 //DFS (Depth First Search)
 
 const depthFirstvalues = (root) => {
-    if(root === null) return []; //edge case
+    if(root === null) return []; //Edge case - If tree is empty
     const stack = [root];
     const result = [];
     while(stack.length>0){
