@@ -1,4 +1,4 @@
-//Creating claas for bluprint of nodes.
+//Creating Claas for bluprint of nodes.
 
 class Node{
     constructor(val){
