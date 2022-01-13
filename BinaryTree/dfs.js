@@ -46,3 +46,18 @@ function dfs(root){
 }
 
 console.log(dfs(a));
+
+
+const maxDepth = (root) => {
+    let maxDepth =0;
+}
+
+// var maxDepth = function(root) {
+  
+//     if(root === undefined || root===null){
+//         return 0;
+//     }
+//     var left = maxDepth(root.left);
+//     var right = maxDepth(root.right);
+//     return Math.max(left,right) + 1;
+// };
