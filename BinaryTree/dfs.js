@@ -25,3 +25,24 @@ a.right = c;
 b.left = d;
 b.right= e;
 c.right= f;
+
+function dfs(root){
+    if(root==null) return [];
+    let stack = [root];
+    let result=[];
+    while(stack.length>0){
+        const current = stack.pop();
+        result.push(current.val);
+        if(current.right){
+            stack.push(current.right)
+        }
+        if(current.left){
+            stack.push(current.left)
+        }
+
+    }
+
+    return result;
+}
+
+console.log(dfs(a));

@@ -35,9 +35,7 @@ const depthFirstvalues = (root) => {
     const stack = [root];
     const result = [];
     while(stack.length>0){
-
         const current = stack.pop();
-        console.log(current.val);
         result.push(current.val);
          //Every instance of Node has dot val prpoerty on the inside. 
         //And then from there I need to add this node childerns and we also needs to make sure this childrens exists
