@@ -1,12 +1,16 @@
-class Reactangle{
-    constructor(h,w){
-        this.h=h;
-        this.w=w;
-    }
-    Area(){
-        return this.h*this.w
+class Node{
+    constuctor(val){
+        this.node=val;
+        this.left=null;
+        this.right=null
     }
 }
 
-const squre = new Reactangle(10,2);
-console.log(squre.Area())
+const a = new Node('a');
+const b = new  Node('b');
+const c = new Node('c');
+
+a.left = b
+a.right =c
+
+console.log(a.left)
