@@ -14,7 +14,7 @@ const d = new Node('d');
 const e = new Node('e');
 const f = new Node('f');
 
-//By doing below assignements i am connecting nodes together
+//By doing below assignements i am connecting nodes together accoringly left and right
 a.left = b;
 a.right = c;
 b.left = d;
