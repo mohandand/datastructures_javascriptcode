@@ -1,3 +1,5 @@
+
+// https://www.youtube.com/watch?v=Hj_rA0dhr2I
 // Construct Single Node
 class Node {
     constructor(data, next = null) {
