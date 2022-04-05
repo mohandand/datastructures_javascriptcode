@@ -1,6 +1,10 @@
-function incrementString (string) {  
-    // Extract string's number
-    var number = string.match(/\d+/) === null ? 0 : string.match(/\d+/)[0];
-    console.log(number)
-}
-console.log(increamentString(number))
+function scramble(str1, str2) {
+  for(let char of str2){
+    if(!str2.includes(char)){
+      return false
+    }
+  }
+   return true
+ }
+ 
+ console.log(scramble("abc" ,"abca"))
