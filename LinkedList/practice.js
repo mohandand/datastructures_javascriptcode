@@ -1,21 +1,18 @@
-function scramble(str1, str2) {
-  let obj1={}
-  let obj2 = {}
-  for(let char of str1){
-    obj1[char]?obj1[char]++:obj1[char]=1
+var countSubstrings = function(s) {
+  let count=0;
+  const arr=[];
+  for(let i=0;i<s.length;i++){
+      countPalindrome(s,i,i); // odd length
+      countPalindrome(s,i,i+1); // even length
   }
-  console.log(obj1)
-   for(let char of str2){
-     obj2[char]?obj2[char]++:obj2[char]=1
-   }
-   console.log(obj2)
-   for(item in obj2){
-     if(!(obj2[item] == obj1[item])){
-        return false
-        }
-   }
-   return true
- }
- 
- 
- console.log(scramble("rkqodlw" ,"world"))
+  return count;
+  function countPalindrome(str,left,right){
+      while(left>=0 && right<str.length && str[left]===str[right]){
+    arr.push(str.substring(left,right+1)); // if you want those substrings as well
+          count++;
+          left--;
+          right++;
+      }
+  }
+};
+console.log(countSubstrings("abba"))
