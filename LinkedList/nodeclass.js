@@ -17,6 +17,8 @@ class Node {
   
     // Insert first node
     insertFirst(data) {
+      // newnode = new Node(data, this.head);
+      // this.head = newnode;
       this.head = new Node(data, this.head);
       this.size++;
     }
