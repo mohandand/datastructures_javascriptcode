@@ -128,7 +128,7 @@ class Node {
     printListData() {
       let current = this.head;
   
-      while (current) {
+      while (current !== null) {
         console.log(current.data);
         current = current.next;
       }

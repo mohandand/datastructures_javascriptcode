@@ -29,4 +29,14 @@ function printLinkedList(head){
    }
 }
 
+//Traverse Through Linked List Recursively:
+
+function printLLRecursive(head){
+    if(head == null){
+        return
+    }
+    console.log(head.val);
+    printLLRecursive(head.next)
+}
+
 printLinkedList(a);
