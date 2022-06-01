@@ -26,4 +26,9 @@ function getNodeVal(head ,index){
     }
 }
 
-console.log(getNodeVal(a,2))
+function recGetNode(head,inde){
+    if(head === null) return null;
+    if(inde == 0) return head.val;
+    return recGetNode(head.next,inde-1)
+}
+console.log(recGetNode(a,2))
