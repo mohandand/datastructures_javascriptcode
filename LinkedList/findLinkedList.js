@@ -12,7 +12,7 @@ let d  = new Node('D');
 
 a.next = b;
 b.next = c;
-c.nect = d;
+c.next = d;
 
 function findVal(head ,target){
     let current = head;
@@ -24,4 +24,11 @@ function findVal(head ,target){
     }
     return false
 }
-console.log(findVal(a,C))
+
+function recursiveFind(head ,target){
+    if(head === null) return false;
+    if(head.val == target) return true;
+    recursiveFind(head.next,target)
+}
+
+console.log(recursiveFind(a,"C"))
