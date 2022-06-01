@@ -1,10 +1,24 @@
-function partsSums(ls) {
-  let lsr = [];
-let sum = 0;
-  for(let i =ls.length-1 ;i>=-1;i--){
-     lsr.unshift(sum)
-      sum = sum + ls[i]
+class Node{
+  constructor(val){
+    this.val = val;
+    this.next = null;
   }
-return lsr;
 }
-console.log(partsSums([1, 2, 3, 4, 5, 6]))
+
+let a = new Node('1');
+let b = new Node('2');
+let c = new Node('3');
+let d = new Node('4');
+
+a.next = b;
+b.next = c;
+c.next = d;
+
+function printList(node){
+  while(node!== null){
+    console.log(node.val);
+    node = node.next;
+  }
+}
+
+console.log(printList(a))

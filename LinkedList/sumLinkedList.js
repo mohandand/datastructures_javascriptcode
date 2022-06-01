@@ -26,11 +26,9 @@ function sumOfLLValues(head){
 
 
 
-var sum=0;
+var sum1=0;
 function recursiveSum(head){
-    if(head == null) return;
-    sum+=head.val
-    return recursiveSum(head.next)
+    if(head == null) return 0;
+    return head.val + recursiveSum(head.next)
 }
-
-recursiveSum(a);
+console.log(recursiveSum(a));
