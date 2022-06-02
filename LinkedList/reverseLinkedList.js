@@ -23,6 +23,16 @@ function revList(head){
         pre = current;
         current = next;
     }
-    console.log(d.next.next)
+    console.log(d.next)
 }
+
+//Recursive Function
+
+function recurRev(head ,pre = null){
+    if(head === null) return head;
+    let next = head.next;
+    head.next = pre;
+    return recurRev(next,)
+}
+
 console.log(revList(a))
