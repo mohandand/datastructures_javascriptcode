@@ -10,3 +10,6 @@ var hasCycle = function(head) {
      }
      return false
  };
+
+ /* follow up question : If you want to find length of cycle then stop fast pointer once it find the cycle then move slow
+ pointer and maintian counter untill it reaches fast pointer. */
