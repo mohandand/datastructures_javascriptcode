@@ -1,24 +1,23 @@
-class Node{
-  constructor(val){
-    this.val = val;
-    this.next = null;
+var productExceptSelf = function(nums) {
+  let mul = 1;
+  let mulr = 1;
+  
+  let lefta = [];
+  let righta = [];
+  
+  for(let i=0;i<nums.length;i++){
+      lefta[i] =mul;
+      mul = mul*nums[i];
   }
-}
-
-let a = new Node('1');
-let b = new Node('2');
-let c = new Node('3');
-let d = new Node('4');
-
-a.next = b;
-b.next = c;
-c.next = d;
-
-function printList(node){
-  while(node!== null){
-    console.log(node.val);
-    node = node.next;
+  console.log(lefta)
+  for(let i=nums.length-1;i>=0;i--){
+      righta[i] = mulr;
+      mulr = mulr*nums[i]
+      righta[i] =righta[i] * lefta[i];
   }
-}
+  
+  return righta
+  
+};
 
-console.log(printList(a))
+console.log(productExceptSelf([1,2,3,4]))
