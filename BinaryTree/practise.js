@@ -59,5 +59,25 @@ function bfs(root){
 return res;
 }
 
+//https://www.youtube.com/watch?v=o4YXgRgmmxw
 
-console.log(bfs(a));
+function bfsRecursive(root){
+    let out = [];
+    function bfs(root,level){
+    if(root===null) return [];
+    
+    if(out[level]){
+        out[level].push(root.val)
+    }else{
+        out[level] = [root.val]
+    }
+
+    bfs(root.left,level+1);
+    bfs(root.right,level+1);
+}
+
+bfs(root,0);
+return out;
+ 
+}
+console.log(bfsRecursive(a));
