@@ -30,11 +30,14 @@ c.left = f;
 
 //DFS
 
+let res = [];
+
 const depthFirstvalues = (root) => {
     if(root === null) return [];
-
+    res.push(root.val);
     const leftvalues =  depthFirstvalues(root.left);//[b,d,e]
     const rightvalues = depthFirstvalues(root.right); //[c,f]
-    return [root.val, ...leftvalues, ...rightvalues];
+    // return [root.val, ...leftvalues, ...rightvalues];
+    return res;
 }
 console.log(depthFirstvalues(a));
