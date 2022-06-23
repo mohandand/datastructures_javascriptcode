@@ -25,7 +25,6 @@ function sumOfLLValues(head){
 }
 
 
-
 var sum1=0;
 function recursiveSum(head){
     if(head == null) return 0;

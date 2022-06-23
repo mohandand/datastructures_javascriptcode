@@ -1,0 +1,19 @@
+Binary Tree:
+        a
+      /   \
+     b     c
+    / \     \
+   d    e    f
+
+->All alphabts are called nodes and arrows called edges.
+-> a is root node as it has no parent 
+-> d,e,f are leaf nodes as they dont have childrens
+-> b is child of a node and parent of d and e node.
+So a node can be a achild as well as parent based on its context.
+
+->Rules ForBinary Tree:
+   -> At most two childrens per nodes
+   -> Exactly one root node
+   -> Exatly one path between root node and any other node in Tree
+   ->Empty tree also a binary tree.
+
