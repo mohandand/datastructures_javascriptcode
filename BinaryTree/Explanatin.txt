@@ -15,5 +15,13 @@ So a node can be a achild as well as parent based on its context.
    -> At most two childrens per nodes
    -> Exactly one root node
    -> Exatly one path between root node and any other node in Tree
-   ->Empty tree also a binary tree.
+   ->Empty tree also a binary tree
+
+->Programaticaly Represenation
+    ->Will Represenat tree as a object and every node treat as object and value and leftnode and rightnode 
+       are the properties of node if they dont have left or right then we put as null.
+->DFS
+    ->
+        
+
 
