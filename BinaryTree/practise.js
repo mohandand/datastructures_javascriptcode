@@ -80,4 +80,15 @@ bfs(root,0);
 return out;
  
 }
-console.log(bfsRecursive(a));
+
+var maxDepth = function(root) {
+    if(root === undefined || root===null){
+        return 0;
+    }
+    var left = maxDepth(root.left);
+    var right = maxDepth(root.right);
+    return Math.max(left,right) + 1;
+};
+
+
+console.log(maxDepth(a))
