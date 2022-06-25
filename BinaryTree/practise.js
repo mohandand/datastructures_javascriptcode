@@ -13,7 +13,7 @@ const d = new Node('d')
 
 a.left = b;
 a.right = c;
-c.right = d;
+c.left = d;
 
 function dfs(root){
     if(root === null) return [];
@@ -87,9 +87,9 @@ var maxDepth = function(root) {
     if(root === undefined || root===null){
         return 0;
     }
-    var left = maxDepth(root.left);
+    //var left = maxDepth(root.left);
     var right = maxDepth(root.right);
-    return Math.max(left,right) + 1;
+    return Math.max(right) + 1;
 };
 
 
