@@ -1,3 +1,23 @@
+class Node{
+    constructor(val){
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+const a =new Node('a');
+const b = new Node('b');
+const c = new Node('c');
+
+
+a.left = b;
+a.right = c;
+
+
+
+
+
 const isSameTree = (p, q) => {
     // if both are null then the y are equal
     if (!p && !q) return true
@@ -7,8 +27,13 @@ const isSameTree = (p, q) => {
     if (p.val !== q.val) return false;
     
     // otherwise return recursively the right nodes & left nodes
-    return isSameTree(p.right, q.right) && isSameTree(p.left, q.left);
+    let right = isSameTree(p.right,q.right)
+    let left  = isSameTree(p.left,q.left)
+    return  right && left 
 };
+
+console.log(isSameTree(a,a))
+
 
 //Iterartive
 
