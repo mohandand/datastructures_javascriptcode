@@ -15,9 +15,6 @@ a.left = b;
 a.right = c;
 
 
-
-
-
 const isSameTree = (p, q) => {
     // if both are null then the y are equal
     if (!p && !q) return true
