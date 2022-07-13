@@ -20,6 +20,8 @@ let username = id("username"),
     engine(email, 1, "Email cannot be blank");
     engine(password, 2, "Password cannot be blank");
   });
+
+  
 /* id will target our id
 serial will target our classes [error class, success and failure icons]
 message will print a message inside our .error class */
