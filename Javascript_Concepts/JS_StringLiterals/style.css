@@ -1,0 +1,15 @@
+h1{
+    text-align:center;
+    max-height:500px;
+    background-color:gray;
+    border-style: solid;
+  }
+  .HolyGrail-body{
+    display:flex;
+  }
+  .HolyGrail-content {
+    flex: 1;
+    border-style: solid;
+  }
+  
+  
