@@ -7,6 +7,7 @@ const graph = {
     f:[]
 };
 
+//Iterative Approach
 const depthFirst = (graph,source) => {
     const stack = [source];
     while(stack.length>0){
