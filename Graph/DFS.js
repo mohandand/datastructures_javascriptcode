@@ -21,4 +21,6 @@ const depthFirst = (graph,source) => {
 
 }
 
+//Recursive Approach
+
 console.log(depthFirst(graph,'a')) //abdfce
