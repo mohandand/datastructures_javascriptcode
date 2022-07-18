@@ -14,3 +14,29 @@
     <script src='practice.js'></script> -->
 </body>
 </html>
+
+function findBusiestPeriod(data) {
+    // your code goes here
+    let period = '', maxVisitors = 0, tempMax = 0;
+    for (let x=0; x<data.length; x++) {
+      let currTime = data[x][0], currVisitor = data[x][1], currOperation = data[x][2];
+      
+      if (currOperation === 1) {
+        tempMax += currVisitor;
+      } else {
+        tempMax -= currVisitor; 
+      }
+      
+      if (data[x+1] && currTime === data[x+1][0]) {
+        continue;
+      }
+      
+      if (maxVisitors < tempMax) {
+        maxVisitors = tempMax;
+        period = currTime;
+      }
+    }
+    
+    return period;
+  }
+  

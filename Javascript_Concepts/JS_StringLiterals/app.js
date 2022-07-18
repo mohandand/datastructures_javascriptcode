@@ -22,13 +22,12 @@ const dogs = [
     { name: 'Sunny', age: 1 }
 ]
 
-const dogList = `<ul> 
-${dogs.map(dog => {
-    <li>${dog.name} has age of ${dog.age}</li>
-})}
-</ul>`
+const dogList = `${dogs.map(dog => `<li>${dog.name} is ${dog.age}</li>
+`)}`
 
-parent.innerHTML = parent.innerHTML + dogList;
+let div = document.getElementsByTagName('div')[0]
+
+div.innerHTML = div.innerHTML + dogList;
 
 
 
