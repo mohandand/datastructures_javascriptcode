@@ -21,13 +21,13 @@ const depthFirst = (graph,source) => {
 }
 
 //Recursive Approach
-
+//In the below we dont have base case but when it check e it dont have neighbours so it dont call recursive call
+//so it act as base case.
 const dfsRecursive = (graph,source) => {
    console.log(source)
    for(let neighbor of graph[source]){
     dfsRecursive(graph,neighbor)
    }
-
 }
 
 console.log(depthFirst(graph,'a')) //abdfce
