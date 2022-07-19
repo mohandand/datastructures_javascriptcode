@@ -1,5 +1,6 @@
 const unDirectedGraph = (edges,nodeA,nodeB) => {
     const graph = buildGraph(edges)
+    console.log(graph)
 }
 
 const buildGraph = (edges) => {
@@ -11,6 +12,7 @@ const buildGraph = (edges) => {
         graph[a].push(b);
         graph[b].push(a);
         }
+        return graph
 }
 
 const edges = [
