@@ -16,7 +16,7 @@ function hasPathBFS(graph,src,des){
     while(queue>0){
         let current = queue.shift();
         if(current === des) return true
-        for(let neighbor of graph[src]){
+        for(let neighbor of graph[current]){
             queue.push(neighbor)
         }
     }
