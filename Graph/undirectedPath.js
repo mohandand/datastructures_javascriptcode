@@ -1,7 +1,12 @@
+// Stpe-1 Convert Edge List into Adjecncy List
+//Step-2 implement haspath by traversing it
+//step-3 check for cycle to avoid infinte loop
+
 const unDirectedGraph = (edges,nodeA,nodeB) => {
     const graph = buildGraph(edges)
     console.log(graph)
-    return hasPath(graph,nodeA,nodeB, new Set());
+    const visited = new Set();
+    return hasPath(graph,nodeA,nodeB,visited );
 }
 
 function hasPath(graph,src,des,visited){
