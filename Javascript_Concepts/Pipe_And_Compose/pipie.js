@@ -23,4 +23,4 @@ console.log(pipe(
     uppercase,
     get6Characters,
     reverse
-  )({ name: 'Buckethead' }));
+  )({ name: 'Buckethead' }));  //'TEKCUB
