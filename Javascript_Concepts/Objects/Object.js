@@ -70,10 +70,13 @@ const user2 = {
 
 let strObj = JSON.stringify(user2) //convert as String
 
+let strObjSub =  JSON.stringify(user2,["name"]) //it stringfy only name and return as object
+
 //localStorage.setItem(test ,strObj) // key will be test and object as string willbe value. caheck under aplications if u asssign object directly it give [Object Object] as when it tries to convert forcefully to string it will becomes Object Object;
 
 console.log( strObj,typeof strObj)  /
 
+console.log( strObjSub) 
 
 console.log( JSON.parse(strObj),typeof JSON.parse(strObj))   //Convert Back to Object
 
