@@ -10,3 +10,21 @@ delete User.phone;
 
 console.log(User);
 console.log(User["Last Name"]); //you have to access/delet like that you cant access with dot.
+
+//Adding dynmic key value pair to an object
+
+const propertyname = "firstname";
+const name = "Mohan"
+
+const user1 = {
+    propertyname:name,// it wont work
+    [propertyname]:name
+}
+
+console.log(user1);
+
+//Loop Through Objects
+
+for(let key in User){
+    console.log(key)
+}
