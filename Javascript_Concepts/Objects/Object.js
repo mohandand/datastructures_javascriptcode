@@ -26,5 +26,5 @@ console.log(user1);
 //Loop Through Objects
 
 for(let key in User){
-    console.log(key)
+    console.log(`${key} : ${User[key]}`)
 }
