@@ -28,3 +28,11 @@ console.log(user1);
 for(let key in User){
     console.log(`${key} : ${User[key]}`)
 }
+
+//Object entires,values and Keys
+
+let objent = Object.entries(User);
+let Keys =Object.keys(User);
+let values = Object.values(User);
+
+console.log(objent,Keys,values);
