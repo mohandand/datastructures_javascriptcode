@@ -36,3 +36,38 @@ let Keys =Object.keys(User);
 let values = Object.values(User);
 
 console.log(objent,Keys,values);
+
+//Object with duplicate keys
+
+let obj = {
+    a:10,
+    b:20,
+    a:9
+}
+
+console.log(obj)  //last key value is relaced at first position and written
+
+//Tricky Object
+
+const a = {};
+const  b = {key:"b"}
+const  c = {key:"c"}
+a[b]=123; // when we assign key as object it assignd like a["[Object Object]"] =123 
+          //as object cant be converted as key unless its string when it tries to convert it becomes Object Object;
+a[c]=456; // when we assign key as object it assignd like a["[Object Object]"] =456 so overirided;
+console.log(a)
+console.log(a[b])
+
+//JSON.stringfy() and JSON.parse()
+
+const user2 = {
+    name:"Mohan",
+    age:27,
+}
+
+let strObj = JSON.stringify(user2) //convert as String
+
+console.log( strObj,typeof strObj)  /
+
+
+console.log( JSON.parse(strObj),typeof JSON.parse(strObj))   //Convert Back to Object
