@@ -23,6 +23,40 @@ console.log(result)
 //So In Jvascript we use this to referer something like an Object
 
 console.log(this); //refers window Object
- this.a =10;
+this.a =10;
 console.log(this.a); //now we added a property to window Object check in console
- 
+
+//this key word inside a function looks for Parent Object as its nor there it refer Window Object
+
+function getParam(){
+    console.log(this.a);
+}
+
+console.log(getParam());
+
+//this inside Object
+
+let user = {
+    name:"Mohan",
+    getName(){
+        console.log(this.name)
+    },
+    getName1: function(){
+        console.log(this.name)
+    },
+    childObj:{
+        newName : "DAnd",
+        getName(){
+            console.log(this.newName,"and",this.name)  //normal Function only poiniting to immedate parent if its not there 
+        }
+    },
+    getNameArrow:() => {
+        console.log(this.name) //it refer to Window Object
+        console.log(this.name) //it refer to window bject
+    }
+}
+
+user.getName();
+user.getName1();
+user.childObj.getName();
+user.getNameArrow();
