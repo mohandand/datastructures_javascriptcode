@@ -10,10 +10,19 @@ Implicit and Ecplicit
 var calc ={
     total:0,
     add(a) {
-        this.total+a;
-        return this;
+        sum = this.total+a;
+        return this; //refer entire object
     }
 }
 
 const result = calc.add(5);
 console.log(result)
+
+//This in english we used to refer some thing ex: if you want tell about bat .you say this is Bat here this means bat
+
+//So In Jvascript we use this to referer something like an Object
+
+console.log(this); //refers window Object
+ this.a =10;
+console.log(this.a); //now we added a property to window Object check in console
+ 
