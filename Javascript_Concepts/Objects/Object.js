@@ -98,5 +98,77 @@ const user4 = {
 
 console.log(user4)
 
+//Inside Object arrow function if we use this it refer to Window Object
+
+const shape = {
+    radius:10,
+    diameter() {
+        return this.radius * 2;
+    },
+    perimeter: () => {
+        return this.radius*2
+    }
+}
+
+console.log(shape.diameter());
+console.log(shape.perimeter());
+
+//Destructuring In Objects
+
+const {radius,diameter,perimeter} = shape
+
+const {radius:radi,diameter:dia,perimeter:per} = shape
+
+console.log(radius,diameter,perimeter);
+
+console.log(radi,dia,per);
+
+// ...args parameter should be last in the function if you put middle u get error but spread operator thats not the case
+
+function getIntems(fruitList,favFruit,...args){
+    return [...fruitList,favFruit,...args]
+}
+
+console.log(getIntems(["a","b","c"],"d","e","f","g"));
+
+//Object RefernceShallow Copy
+
+let m = {greetin:"hey"}
+let n;
+n=m;
+m.greetin = "Hello"
+console.log(n.greetin) //Hello
+
+let person ={name:"Mohan"}
+const members = [person];
+person = null
+// person.name=null  //but if u do this it will effect that property
+console.log("Storing at members[0] which is another location not refernce")
+console.log(members)
+
+//Deep Copy not refernce but separate location
+// if you reassign complete object then its deep copy in separate place
+let ab = {greetin:"hey"}
+//method-1
+let o = JSON.parse(JSON.stringify(ab))
+//method-2
+let p ={...ab}
+//method-3
+let q = Object.assign({},ab)
+ab.greetin = "Chaaged"
+console.log("Deep Copy")
+console.log(o.greetin) //hey
+console.log(p.greetin) //hey
+console.log(q.greetin) //hey
 
 
+//if object points differnt memeory sapce both are not same
+
+let k = {greetin:"hey"}
+let l = {greetin:"hey"}
+
+console.log({a:1} == {a:1}) //false
+console.log({a:1} === {a:1}) //fallse
+console.log(k==l)
+
+//Object Freez and Object Sael

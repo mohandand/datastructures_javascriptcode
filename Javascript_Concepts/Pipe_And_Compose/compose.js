@@ -2,6 +2,7 @@
 
 //Compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x); src:https://medium.com/javascript-scene/reduce-composing-software-fe22f0c39a1d
 
+// multiple arror functions : https://atomizedobjects.com/blog/quick-fixes/what-do-multiple-arrow-functions-mean-in-javascript/
 getName = (person) => person.name;
 uppercase = (string) => string.toUpperCase();
 get6Characters = (string) => string.substring(0, 6);
