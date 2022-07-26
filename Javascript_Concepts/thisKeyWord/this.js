@@ -51,8 +51,16 @@ let user = {
         }
     },
     getNameArrow:() => {
-        console.log(this.name) //it refer to Window Object
-        console.log(this.name) //it refer to window bject
+        console.log(this.name) //it refer to Window Object beacause arrow function look for its parent function as its not there it pint ot window object
+        
+        console.log(this) //it refer to window Object 
+    },
+
+    getNameNestedArrow () {
+        var nestedArrow = () => {
+            console.log(this.name); //user.name// it will refer to its parent function this refernce
+            nestedArrow();
+        }
     }
 }
 
@@ -60,3 +68,4 @@ user.getName();
 user.getName1();
 user.childObj.getName();
 user.getNameArrow();
+user.getNameNestedArrow()
