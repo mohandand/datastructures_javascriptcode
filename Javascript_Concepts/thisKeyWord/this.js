@@ -1,4 +1,5 @@
 /* 
+src:https://www.youtube.com/watch?v=rv7Q11KWmKU&t=83s
 two types of binidings:
 Implicit and Ecplicit
 ->Implicit binding  is applied when you invoke a function in an object using dot notation
@@ -47,12 +48,11 @@ let user = {
     childObj:{
         newName : "DAnd",
         getName(){
-            console.log(this.newName,"and",this.name)  //normal Function only poiniting to immedate parent if its not there 
+            console.log(this.newName,"and",this.name)  //normal Function only poiniting to immedate parent if its not there it point to window
         }
     },
     getNameArrow:() => {
         console.log(this.name) //it refer to Window Object beacause arrow function look for its parent function as its not there it pint ot window object
-        
         console.log(this) //it refer to window Object 
     },
 
@@ -68,4 +68,47 @@ user.getName();
 user.getName1();
 user.childObj.getName();
 user.getNameArrow();
-user.getNameNestedArrow()
+user.getNameNestedArrow();
+
+//this inside a class or a constructor
+
+class profile{
+    constructor(n){
+        this.firstname = n;
+    }
+
+    getProfile(){
+        console.log(this.firstname)  // this herer points to everthing inside of constructor
+    }
+}
+
+const Profile = new profile("Dandigam") // creating new Object from profile class
+console.log(Profile) //Object with name:Dandigam and isnide object constrctor class and getProfile Method.
+Profile.getProfile(); // Dandigam // So inside of the class this points to all the variable inside constructor 
+
+//Whats below Output
+
+function makeUser(){
+    return {
+        namee:"DAND",
+        ref:this
+    }
+}
+
+let userr = makeUser();
+console.log(user) //it prints name:Dand and ref:window Object because makeUser parent is Window Object
+
+//whats is below output
+
+let test = {
+    greet : "hello",
+    print(){
+        return this.greet;
+    }
+}
+
+// let temp = test;
+// console.log("NOt object directly Called")
+// console.log(temp.print())
+
+test.print();
