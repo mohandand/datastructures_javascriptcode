@@ -4,6 +4,10 @@ two types of binidings:
 Implicit and Ecplicit
 ->Implicit binding  is applied when you invoke a function in an object using dot notation
 ->Expilcit Binding can be applied using call,bind and apply
+//IMpotant notes
+
+this inside noraml function always points to its parent Object
+this inside arrow function always points to its arent function and no parent function meants points to Object
 */
 
 //Implicit binding
@@ -103,7 +107,7 @@ console.log(user) //it prints name:Dand and ref:window Object because makeUser p
 let test = {
     greet : "hello",
     print(){
-        return this.greet;
+         console.log(this.greet);
     }
 }
 
@@ -112,3 +116,48 @@ let test = {
 // console.log(temp.print())
 
 test.print();
+setTimeout(test.print,1000) //its consider as callback functionrather than the method of object  so that method no longer acces to its objec
+setTimeout(function(){
+    test.print();
+},1000)
+
+//What is output if below code
+
+var length=4;
+
+function callback(){
+    console.log(this.length);
+}
+
+const object ={
+    length:5,
+    method(fn){
+        fn();
+    }
+}
+
+object.method(callback); //4 as fn is inside object so it target to global object and print 4
+
+
+
+//Write code
+
+const calculation = {
+    total : 0,
+    add(a){
+        this.total +=a;
+        return this
+    },
+    mul(a){
+        this.total *=a;
+        return this
+    },  
+    sub(a){
+        this.total -=a;
+        return this
+    }
+
+}
+
+const res = calculation.add(10).mul(10).sub(10);
+console.log(res.total);
