@@ -38,7 +38,7 @@ function bfs(root){
     let result=[];
     while(queue.length>0){
         let current = queue.shift();
-        result.push(current.value);
+        result.push(current.val);
         if(current.right !==null) queue.push(current.right);
         if(current.left !==null) queue.push(current.left);
     }
