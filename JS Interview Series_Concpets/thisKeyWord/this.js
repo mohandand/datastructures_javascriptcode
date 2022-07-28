@@ -2,11 +2,11 @@
 src:https://www.youtube.com/watch?v=rv7Q11KWmKU&t=83s
 two types of binidings:
 Implicit and Ecplicit
-->Implicit binding  is applied when you invoke a function in an object using dot notation
+->Implicit binding  is applied when you invoke a function in an object using dot notation but it will points to context of its function
 ->Expilcit Binding can be applied using call,bind and apply
 //IMpotant notes
 
-this inside noraml function always points to its parent Object
+this inside noraml function always points to its parent Object never points to its function
 this inside arrow function always points to its arent function and no parent function meants points to Object
 */
 

@@ -155,11 +155,14 @@ let o = JSON.parse(JSON.stringify(ab))
 let p ={...ab}
 //method-3
 let q = Object.assign({},ab)
+//method-4 
+let r = Object.create(ab)
 ab.greetin = "Chaaged"
 console.log("Deep Copy")
 console.log(o.greetin) //hey
 console.log(p.greetin) //hey
-console.log(q.greetin) //hey
+console.log(q.greetin)
+console.log(r.greetin)  //check
 
 
 //if object points differnt memeory sapce both are not same
