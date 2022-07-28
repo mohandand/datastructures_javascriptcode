@@ -31,4 +31,19 @@ function dfs(root){
     }
     return res
 }
-console.log(dfs(a))
+
+function bfs(root){
+    if(root==null) return []
+    let queue = [root];
+    let result=[];
+    while(queue.length>0){
+        let current = queue.shift();
+        result.push(current.value);
+        if(current.right !==null) queue.push(current.right);
+        if(current.left !==null) queue.push(current.left);
+    }
+    return result;
+
+
+}
+console.log(bfs(a))
