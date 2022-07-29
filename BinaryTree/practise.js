@@ -47,4 +47,11 @@ function bfs(root){
 
 
 }
-console.log(bfs(a))
+
+function dfsRecu(root){
+    if(root===null) return [];
+    console.log(root.val)
+    let left = dfsRecu(root.left)
+    let right= dfsRecu(root.right)
+}
+console.log(dfsRecu(a))
