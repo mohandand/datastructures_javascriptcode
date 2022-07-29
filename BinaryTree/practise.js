@@ -54,4 +54,16 @@ function dfsRecu(root){
     let left = dfsRecu(root.left)
     let right= dfsRecu(root.right)
 }
+
+//Comapring two trees
+
+function isSame(p,q){
+    if(!p && !q) return true;
+    if(!p || !q) return false;
+    if(p.val !== q.val) return false;
+    let left = isSame(p.left,q.left)
+    let right =isSame(p.right,q.right)
+    return left&&right;
+}
+
 console.log(dfsRecu(a))
