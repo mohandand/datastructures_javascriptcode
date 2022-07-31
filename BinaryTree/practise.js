@@ -77,10 +77,11 @@ function isSame(p,q){
         let node2 = queue[1];
         if(!node1 && node2 || node2 &&!node1 || node1.val !==node2.val){
             return false;
-        }else{
-            
         }
 
-        queue.push()
+        queue.push(node1.left);
+        queue.push(node2.left);
+        queue.push(node1.right);
+        queue.push(node2.right);
     }
 }
