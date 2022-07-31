@@ -17,8 +17,8 @@ function isSame(p,q){
     if(!p && !q) return true;
     if(!p || !q) return false;
     if(p.val !== q.val) return false;
-    let left = (p.left,q.left);
-    let right = (p.right,q.right)
+    let left = isSame(p.left,q.left);
+    let right = isSame(p.right,q.right)
     return left&&right;
 }
 
