@@ -11,8 +11,7 @@ const b = new Node('b')
 const c = new Node('c')
 a.left = b
 a.right = c
-b.left = c
-b.right = b
+
 
 function isSame(p,q){
     if(!p && !q) return true;
@@ -41,6 +40,7 @@ function isSameRec(p,q){
         queue.push(node1.right)
         queue.push(node2.left)
     }
+    return true
 }
 
 
