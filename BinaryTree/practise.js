@@ -67,3 +67,20 @@ function isSame(p,q){
 }
 
 console.log(dfsRecu(a))
+
+//Comparing Trees Iterative
+
+function isSame(p,q){
+    let queue = [p,q];
+    while(queue.length>0){
+        let node1 = queue[0];
+        let node2 = queue[1];
+        if(!node1 && node2 || node2 &&!node1 || node1.val !==node2.val){
+            return false;
+        }else{
+            
+        }
+
+        queue.push()
+    }
+}
