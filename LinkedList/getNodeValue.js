@@ -5,7 +5,7 @@ class Node{
     }
 }
 
-let a  = new Node('A');
+let a = new Node('A');
 let b = new Node('B');
 let c = new Node('C');
 let d = new Node('D');

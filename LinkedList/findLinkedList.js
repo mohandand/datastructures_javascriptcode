@@ -15,7 +15,6 @@ b.next = c;
 c.next = d;
 
 function findVal(head ,target){
-    let current = head;
     while(head !== null){
         if(head.val === target){
             return true;

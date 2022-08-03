@@ -18,10 +18,10 @@ function revList(head){
     let current = head;
     let pre = null;
     while(current!==null){
-        let next = current.next;
+        let nextelment = current.next;
         current.next = pre;
         pre = current;
-        current = next;
+        current = nextelment;
     }
     console.log(d.next)
 }
@@ -32,7 +32,6 @@ function recurRev(head ,pre = null){
     if(head === null) return head;
     let next = head.next;
     head.next = pre;
-    return recurRev(next,)
+    return recurRev(next,head)
 }
-
-console.log(revList(a))
+console.log(recurRev(a))

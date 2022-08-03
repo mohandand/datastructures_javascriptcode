@@ -41,6 +41,53 @@ function hasCycle(head){
   return false
 }
 
+function hasCycle1(head){
+    let slow = head;
+    let fast =head;
+    while(fast && fast.next){
+      slow = slow.next
+      fast =fast.next.next;
+      if(slow == fast){
+        return true
+      }
+    }
+    return false;
+}
+
 //console.log(printLinkedList(a))
 
-console.log(hasCycle(a));
+function palindrome(head){
+  let slow =head;
+  let fast = head;
+  let stack = []
+  while(fast){
+    if(!fast.next){
+      slow=slow.next;
+      break;
+    }
+    stack.push(slow.val);
+    slow =slow.next;
+    fast = fast.next.next
+  }
+  
+  while(slow){
+    if(slow.val!==stack.pop()){
+      return false
+    }
+    slow = slow.next;
+  }
+return true;
+}
+
+function revList(head){
+  let current =head;
+  let pre =null;
+  while(current){
+    let nextele = current.next;
+    current.next = pre;
+    pre = current;
+    current = nextele;
+  }
+}
+
+console.log(hasCycle1(a));

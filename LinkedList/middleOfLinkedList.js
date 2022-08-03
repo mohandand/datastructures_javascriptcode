@@ -5,7 +5,6 @@ var middleNode = function(head) {
         if(!fast.next) return slow
         slow = slow.next;
         fast = fast.next.next
-    }
-    
+    }   
     return slow
 };
