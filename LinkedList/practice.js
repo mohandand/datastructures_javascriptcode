@@ -154,7 +154,7 @@ function removenthElment(head,n){
 
    prev.next = current.next;
 
-   return head.next
+   return dummy.next;
 }
 
 console.log(hasCycle1(a));
