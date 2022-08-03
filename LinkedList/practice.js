@@ -24,12 +24,18 @@ function printLinkedList(head){
 }
 
 function hasCycle(head){
+  let counter =0
   let fast = head;
   while(fast && fast.next){
     head = head.next;
     fast = fast.next.next
     if(head === fast){
-      return true;
+      head = head.next;
+      while(head==fast){
+        counter++
+        head = head.next;
+      }
+      return counter
     }
   }
   return false
@@ -37,4 +43,4 @@ function hasCycle(head){
 
 //console.log(printLinkedList(a))
 
-console.log(hasCycle(a))
+console.log(hasCycle(a));
