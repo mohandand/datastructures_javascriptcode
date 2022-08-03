@@ -2,7 +2,16 @@
 Question: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 source: https://www.youtube.com/watch?v=M0CLi1HwpvM
 
+lets take tail at head and move n postions
+
+then take prev(as dummy) and rn(removenode as head)  
+
+then move all 3 (tail ,prev ,rn)by one untill tail reaches null
+
+so RN will land exactly where we required node be removed.
+
  */
+
 var removeNthFromEnd = function(head, n) {
     let dummy = new ListNode(-1);
     dummy.next = head;
@@ -12,11 +21,9 @@ var removeNthFromEnd = function(head, n) {
     while(count<n){
         count++;
         tail = tail.next;
-    }
-    
+    }    
     let prev = dummy;
-    let rn = head;
-    
+    let rn = head;   
     while(tail){
         tail =tail.next;
          rn = rn.next;

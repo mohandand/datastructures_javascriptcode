@@ -123,9 +123,38 @@ function removeElements(head,k){
    let current =head;
 
    while(current){
-    if()
+    if(current.val == k){
+      prev.next = current.next;
+      prev=current;
+      current = current.next;
+    }
+    else{
+      prev =current;
+      current = current.next
+    }
    }
 
+}
+
+function removenthElment(head,n){
+
+  let dummy = new Node(-1);
+   dummy.next = head;
+   let prev = dummy;
+   let tail = head;
+   let current = head;
+   while(tail<n){
+    tail = tail.next;
+   }
+
+   while(tail!==null){
+    prev=prev.next;
+    current = current.next
+   }
+
+   prev.next = current.next;
+
+   return head.next
 }
 
 console.log(hasCycle1(a));
