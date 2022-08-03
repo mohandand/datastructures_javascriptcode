@@ -1,23 +1,15 @@
-var productExceptSelf = function(nums) {
-  let mul = 1;
-  let mulr = 1;
-  
-  let lefta = [];
-  let righta = [];
-  
-  for(let i=0;i<nums.length;i++){
-      lefta[i] =mul;
-      mul = mul*nums[i];
+class Node{
+  constructor(val){
+    this.node = val;
+    this.next = null;
   }
-  console.log(lefta)
-  for(let i=nums.length-1;i>=0;i--){
-      righta[i] = mulr;
-      mulr = mulr*nums[i]
-      righta[i] =righta[i] * lefta[i];
-  }
-  
-  return righta
-  
-};
+}
 
-console.log(productExceptSelf([1,2,3,4]))
+const a = new Node('a');
+const b = new Node('b');
+const c = new Node('c');
+const d = new Node('d');
+
+a.next = b;
+b.next = c;
+c.next = d;

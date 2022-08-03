@@ -88,3 +88,28 @@ function isSame(p,q){
         queue.push(node2.right);
     }
 }
+
+//Invert Tree
+
+function invertTree(node){
+    let stack = [node]
+    while(stack.length>0){
+        let current = stack.pop()
+        [current.left,current.right] =[current.right,current.left]
+        stack.push(current.left,current.right)
+      
+    }
+    return node
+}
+
+//Invert Tree BFS
+
+function InvertTreeBFS(node){
+    let queue = [node]
+while(queue.length>0){
+    let current = queue.shift();
+    [current.left,current.right] = [current.right,current.left]
+    queue.push(current.right,current.left)
+}
+return node
+}
