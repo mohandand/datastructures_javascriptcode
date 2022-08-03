@@ -13,13 +13,28 @@ const d = new Node('d');
 a.next = b;
 b.next = c;
 c.next = d;
+d.next = b;
 
-function printLinkedList(node){
-  current = node;
+function printLinkedList(head){
+  current = head;
   while(current!==null){
     console.log(current.val);
     current = current.next;
   }
 }
 
-console.log(printLinkedList(a))
+function hasCycle(head){
+  let fast = head;
+  while(fast && fast.next){
+    head = head.next;
+    fast = fast.next.next
+    if(head === fast){
+      return true;
+    }
+  }
+  return false
+}
+
+//console.log(printLinkedList(a))
+
+console.log(hasCycle(a))
