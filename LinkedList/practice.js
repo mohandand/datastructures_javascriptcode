@@ -90,4 +90,42 @@ function revList(head){
   }
 }
 
+
+function sumOfLinkedList(head){
+  let sum =0; 
+  while(head){
+      sum = sum + head.val;
+      head = head.next;
+   }
+}
+
+
+function MergeList(list1,list2){
+    let dummy = new Node(-1);
+    let prev = dummy;
+    while(list1 & list2){
+      if(list1.val<list2.val){
+        prev.next=list1;
+        prev=list1;
+        list1 =list1.next
+      }else{
+        prev.next = list2;
+        prev = list2;
+        list2 =list2.next;
+      }
+    }
+    
+}
+
+function removeElements(head,k){
+  let dummy = new Node(-1);
+  let prev =dummy
+   let current =head;
+
+   while(current){
+    if()
+   }
+
+}
+
 console.log(hasCycle1(a));

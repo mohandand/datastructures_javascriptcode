@@ -6,7 +6,8 @@ https://leetcode.com/problems/remove-linked-list-elements/
    -> travers the list and check current.val is equal to the value which we need to delete then 
        ->if above is true then set prev.next= current.next and increment current 
         ->else increment prev = current and currnet  = current.next
-    ->dummy.next is head of new list so return it*/
+    ->dummy.next is head of new list so return it
+    */
 
     var removeElements = function(head, val) {
         let dummy = new ListNode(-1);
@@ -24,3 +25,5 @@ https://leetcode.com/problems/remove-linked-list-elements/
         }
         return dummy.next;
     };
+
+    

@@ -1,6 +1,6 @@
 /*
+Question: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 source: https://www.youtube.com/watch?v=M0CLi1HwpvM
-
 
  */
 var removeNthFromEnd = function(head, n) {
