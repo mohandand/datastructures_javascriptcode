@@ -31,7 +31,7 @@ function hasCycle(head){
     fast = fast.next.next
     if(head === fast){
       head = head.next;
-      while(head==fast){
+      while(head!==fast){
         counter++
         head = head.next;
       }
