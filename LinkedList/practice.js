@@ -1,6 +1,6 @@
 class Node{
   constructor(val){
-    this.node = val;
+    this.val = val;
     this.next = null;
   }
 }
@@ -13,3 +13,13 @@ const d = new Node('d');
 a.next = b;
 b.next = c;
 c.next = d;
+
+function printLinkedList(node){
+  current = node;
+  while(current!==null){
+    console.log(current.val);
+    current = current.next;
+  }
+}
+
+console.log(printLinkedList(a))
