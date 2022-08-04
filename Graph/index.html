@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="headerOne"></p>
+     <script src='invertTree.js'></script>
+    <!-- <script src='multiples.js'></script>
+     <script src='perfectsquare.js'></script>
+    <script src='practice.js'></script> -->
+</body>
+</html>
+
+function findBusiestPeriod(data) {
+    // your code goes here
+    let period = '', maxVisitors = 0, tempMax = 0;
+    for (let x=0; x<data.length; x++) {
+      let currTime = data[x][0], currVisitor = data[x][1], currOperation = data[x][2];
+      
+      if (currOperation === 1) {
+        tempMax += currVisitor;
+      } else {
+        tempMax -= currVisitor; 
+      }
+      
+      if (data[x+1] && currTime === data[x+1][0]) {
+        continue;
+      }
+      
+      if (maxVisitors < tempMax) {
+        maxVisitors = tempMax;
+        period = currTime;
+      }
+    }
+    
+    return period;
+  }
+  
