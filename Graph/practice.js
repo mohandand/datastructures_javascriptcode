@@ -1,22 +1,23 @@
 const graph = {
-    a:[b,c],
-    b:[d],
-    c:[e],
-    d:[f]
-}
+    a: ['c','b'],
+    b:['d'],
+    c:['e'],
+    d:['f'],
+    e:[],
+    f:[]
+};
 
-function dfs(graph,source){
-    let stack = [source];
 
+const depthFirst = (graph,source) => {
+    const stack = [source];
     while(stack.length>0){
-        let current = stack.pop();
-        console.log(current);
-
-        for(let neighbour of graph[current]){
-            stack.push(neighbour)
+        const current = stack.pop();
+        console.log(current)
+        for(let neighbor of graph[current]){
+         stack.push(neighbor)    
         }
     }
 
 }
 
-console.log(dfs(graph,a))
+console.log(depthFirst(graph,'a'))
