@@ -20,4 +20,19 @@ const depthFirst = (graph,source) => {
 
 }
 
-console.log(depthFirst(graph,'a'))
+const bredthFirst = (graph,source) => {
+    const queue = [source];
+
+    while(queue.length>0){
+        let current  = queue.shift();
+        console.log(current);
+        for(let neighbour of graph[current]){
+             queue.push(neighbour)
+        }
+    }
+}
+
+
+//console.log(depthFirst(graph,'a'))
+
+console.log(bredthFirst(graph,'a'))
