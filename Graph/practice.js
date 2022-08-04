@@ -33,6 +33,22 @@ const bredthFirst = (graph,source) => {
 }
 
 
+function hasPath(graph,src,dest){
+    if(src === dest) return true;
+
+    for(let neighbour of graph[src]){
+        if(hasPath(graph,neighbour,dest) === true){
+            return true;
+        }
+    }
+}
+
+
+
+
+
 //console.log(depthFirst(graph,'a'))
 
-console.log(bredthFirst(graph,'a'))
+//console.log(bredthFirst(graph,'a'))
+
+console.log(hasPath(graph,'a','e'))
