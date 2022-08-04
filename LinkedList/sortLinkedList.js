@@ -1,14 +1,16 @@
 //Source: https://www.youtube.com/watch?v=Lay55DGfyhA
 
+/* 
+*/
 var sortList = function(head) {
     if(!head || !head.next) return head;
-    
     // splitting the list into two parts recursively
-    let mid  = getMid(head)
+    let mid  = getMid(head);
     let left = sortList(head);
     let right = sortList(mid);       
     return mergeTwoLists(left, right);
 };
+
 
 var getMid = (head) => {
     let slowPtr = head;

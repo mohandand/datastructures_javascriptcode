@@ -10,6 +10,8 @@ then move all 3 (tail ,prev ,rn)by one untill tail reaches null
 
 so RN will land exactly where we required node be removed.
 
+just put pre = rn.next
+
  */
 
 var removeNthFromEnd = function(head, n) {

@@ -32,6 +32,7 @@ function recurRev(head ,pre = null){
     if(head === null) return head;
     let next = head.next;
     head.next = pre;
-    return recurRev(next,head)
+
+    return recurRev(next,)
 }
 console.log(recurRev(a))

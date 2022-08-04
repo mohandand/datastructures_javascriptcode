@@ -1,3 +1,8 @@
+//https://docs.google.com/document/d/1t2gOBxhpqhnYiNMka6bonzYO7B0DMewHscJ0-XQT0CA/edit
+
+//Check above document before you start doing Graph Problems.
+
+
 const graph = {
     a: ['c','b'],
     b:['d'],
