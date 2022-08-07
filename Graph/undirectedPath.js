@@ -1,4 +1,4 @@
-// Stpe-1 Convert Edge List into Adjecncy List
+//Stpe-1 Convert Edge List into Adjecncy List
 //Step-2 implement haspath by traversing it
 //step-3 check for cycle to avoid infinte loop
 
