@@ -1,20 +1,25 @@
-function maximumPoints(array,k){
-    let right = array.length-1;
-    let lsum = 0;
-    let rsum = 0;
-    for(let i=0;i<array.length;i++){
-        lsum += array[i];
+var maxScore = function(cardPoints, k) {
+    let left =0;
+    let right = 0;
+    
+    for(let i=0;i<k;i++){
+        left = left+cardPoints[i]
     }
-    let maxSum = lsum;
-    for(i=k-1 ;k>=0;k++){
-        lsum = lsum-array[k]
-        rsum = rsum+lsum+array[right]
-        if(maxSum<rsum){
-            maxSum = rsum;
-            right--
-        }
+    
+    let maxsum = left;
+    
+    let dec = cardPoints.length-1;
+    
+    for(let i = k-1;i>=0;i--){
+        left = left - cardPoints[i];
+        
+        right = right + cardPoints[dec] 
+        
+        maxsum = Math.max(maxsum , right+left);
+        dec--;
     }
-return maxSumnode
-}
+    
+    return maxsum
+};
 
-console.log(maximumPoints([1,2,3,4,5,6,1],3))
+console.log(maxScore([1,2,3,4,5,6,1],3))
