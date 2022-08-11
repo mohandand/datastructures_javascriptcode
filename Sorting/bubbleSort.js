@@ -1,7 +1,8 @@
 function bubbleSort(array){
-    
-    for(let i=0;i<array.length;i++){
+    console.log("length"+array.length);
+    for(let i=0;i<array.length-1;i++){
         let swap = true;
+        console.log(i);
         for(let j=1;j<array.length-i;j++){
             if(array[j]>array[j-1]){
                 let temp =array[j-1];
@@ -17,4 +18,4 @@ function bubbleSort(array){
     return array;
 }
 
-console.log(bubbleSort([5,4,3]))
+console.log(bubbleSort([3,4,5]))
