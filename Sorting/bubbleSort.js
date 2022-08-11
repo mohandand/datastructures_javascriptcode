@@ -17,4 +17,4 @@ function bubbleSort(array){
     return array;
 }
 
-console.log(bubbleSort([1,4,2,5,3]))
+console.log(bubbleSort([5,4,3]))
